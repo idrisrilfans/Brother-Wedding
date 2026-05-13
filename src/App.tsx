@@ -413,7 +413,7 @@ export default function App() {
             <div className="p-4 bg-stone-50 rounded-2xl border border-stone-100">
               <p className="text-[10px] uppercase font-bold text-stone-400 mb-1 tracking-tighter">BCA</p>
               <p className="text-xl font-serif text-stone-800">123 456 7890</p>
-              <p className="text-xs text-stone-500 mt-1">A.N Aditya Wijaya</p>
+              <p className="text-xs text-stone-500 mt-1">Rifky Mohammad Taufik</p>
             </div>
           </div>
         </div>
