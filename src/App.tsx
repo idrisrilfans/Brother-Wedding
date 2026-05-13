@@ -261,12 +261,12 @@ export default function App() {
             >
               <Calendar className="w-10 h-10 text-rose-300 mx-auto" />
               <h3 className="text-2xl font-serif">Akad Nikah</h3>
-              <p className="text-stone-500 text-sm uppercase tracking-widest">Sabtu, 31 Desember 2024</p>
+              <p className="text-stone-500 text-sm uppercase tracking-widest">Minggu, 14 Juni 2026</p>
               <div className="flex items-center justify-center gap-2 text-rose-400">
                 <Clock className="w-4 h-4" />
-                <span className="font-medium">09:00 - 11:00 WIB</span>
+                <span className="font-medium">08:00 - 11:00 WIB</span>
               </div>
-              <p className="text-stone-600">Hotel Mulia Senayan, Jakarta Selatan</p>
+              <p className="text-stone-600">Gedung Bale Mustika Wangi (BMW), Jl. Margacinta No.93, Margasari, Kec. Buahbatu, Kota Bandung, Jawa Barat 40286</p>
             </motion.div>
 
             <motion.div 
@@ -275,12 +275,12 @@ export default function App() {
             >
               <Calendar className="w-10 h-10 text-rose-300 mx-auto" />
               <h3 className="text-2xl font-serif">Resepsi</h3>
-              <p className="text-stone-400 text-sm uppercase tracking-widest">Sabtu, 31 Desember 2024</p>
+              <p className="text-stone-400 text-sm uppercase tracking-widest">Minggu, 14 Juni 2026</p>
               <div className="flex items-center justify-center gap-2 text-rose-300">
                 <Clock className="w-4 h-4" />
                 <span className="font-medium">19:00 - 21:00 WIB</span>
               </div>
-              <p className="text-stone-300">Grand Ballroom, Hotel Mulia Jakarta</p>
+              <p className="text-stone-300">Gedung Bale Mustika Wangi (BMW), Jl. Margacinta No.93, Margasari, Kec. Buahbatu, Kota Bandung, Jawa Barat 40286</p>
             </motion.div>
           </div>
         </div>
