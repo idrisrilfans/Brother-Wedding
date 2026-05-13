@@ -22,7 +22,7 @@ const SYSTEM_PROMPTS = {
   TOAST_ASSISTANT: `Bantu tamu membuat pidato singkat (toast) maksimal 30 detik untuk resepsi pernikahan berdasarkan poin-poin yang mereka berikan. Gaya bahasa hangat, sopan, dan berkesan.`
 };
 
-const WEDDING_DATE = new Date('2024-12-31T09:00:00');
+const WEDDING_DATE = new Date('June 14, 2026 09:00:00 GMT+0700');
 
 const SectionHeading = ({ title, subtitle }) => (
   <div className="text-center mb-12">
