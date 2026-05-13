@@ -162,7 +162,7 @@ export default function App() {
             transition={{ delay: 0.3 }}
             className="text-6xl md:text-8xl font-serif"
           >
-            Aditya & Clarissa
+            Rifky & Cindy
           </motion.h1>
           <motion.div 
             initial={{ opacity: 0 }}
@@ -370,7 +370,7 @@ export default function App() {
               <textarea 
                 value={toastInput}
                 onChange={e => setToastInput(e.target.value)}
-                placeholder="Contoh: Sahabat SMP Aditya, hobi main bola bareng, doa agar bahagia selalu..."
+                placeholder="Contoh: Sahabat SMP Rifky, hobi main bola bareng, doa agar bahagia selalu..."
                 className="w-full p-6 bg-white/5 border border-white/10 rounded-3xl outline-none focus:border-rose-400 transition-all min-h-[150px] text-white placeholder:text-stone-500"
               />
               <button 
@@ -422,7 +422,7 @@ export default function App() {
       {/* Footer */}
       <footer className="py-20 text-center bg-[#faf9f6] border-t border-stone-100">
         <Heart className="w-6 h-6 text-rose-300 mx-auto mb-6 fill-rose-300" />
-        <h2 className="text-3xl font-serif text-stone-800 mb-4">Aditya & Clarissa</h2>
+        <h2 className="text-3xl font-serif text-stone-800 mb-4">Rifky & Cindy</h2>
         <p className="text-xs text-stone-400 uppercase tracking-[0.5em] mb-12">31 . 12 . 2024</p>
         <div className="flex justify-center gap-6">
           <Music className="w-5 h-5 text-stone-400 cursor-pointer hover:text-rose-400 transition-colors" />
