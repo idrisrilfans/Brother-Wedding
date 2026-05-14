@@ -152,7 +152,7 @@ export default function App() {
             className="absolute inset-0 w-full h-full object-cover opacity-40"
           />
 
-          <div className="absolute inset-0 bg-slate-900/50" />
+          <div className="absolute inset-0 bg-blue-900/50" />
 
           <div className="relative z-10 text-center text-white px-6">
             <p className="uppercase tracking-[0.4em] text-sm mb-6">
