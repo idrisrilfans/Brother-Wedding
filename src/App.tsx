@@ -56,6 +56,13 @@ export default function App() {
   const [guestWish, setGuestWish] = useState('');
   const [formattedWish, setFormattedWish] = useState('');
   const [isFormatting, setIsFormatting] = useState(false);
+
+  const [openInvitation, setOpenInvitation] = useState(false)
+
+  const params = new URLSearchParams(window.location.search)
+
+  const guestName = params.get("to") || "Tamu Undangan"
+
   const [wishes, setWishes] = useState([
     { name: "Sari & Budi", text: "Selamat menempuh hidup baru untuk kedua mempelai yang berbahagia! Semoga cinta kalian abadi selamanya." },
     { name: "Andi Wijaya", text: "Semoga perjalanan baru ini dipenuhi dengan tawa dan kebahagiaan yang tak terhingga." }
@@ -129,9 +136,62 @@ export default function App() {
     setIsGeneratingToast(false);
   };
 
-  return (
+ return (
+  <>
+    <AnimatePresence>
+      {!openInvitation && (
+        <motion.div
+          initial={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.2, ease: "easeInOut" }}
+          className="fixed inset-0 z-[9999] bg-black flex items-center justify-center overflow-hidden"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80"
+            alt="background"
+            className="absolute inset-0 w-full h-full object-cover opacity-40"
+          />
+
+          <div className="absolute inset-0 bg-slate-900/50" />
+
+          <div className="relative z-10 text-center text-white px-6">
+            <p className="uppercase tracking-[0.4em] text-sm mb-6">
+              THE WEDDING OF
+            </p>
+
+            <h1 className="text-5xl md:text-7xl font-serif mb-6">
+              Sesel & Oni
+            </h1>
+
+            <p className="text-sm mb-2">
+              Kepada Bpk/Ibu/Saudara/i
+            </p>
+
+            <h2 className="text-2xl font-bold mb-8">
+              {guestName}
+            </h2>
+
+            <button
+              onClick={() => {
+                setTimeout(() => {
+                  setOpenInvitation(true)
+                }, 300)
+              }}
+              className="border border-white px-8 py-3 rounded-xl hover:bg-white hover:text-black transition-all"
+            >
+              Buka Undangan
+            </button>
+
+            <p className="text-xs mt-8 opacity-70">
+              Mohon maaf apabila ada kesalahan penulisan nama/gelar
+            </p>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+
     <div className="min-h-screen bg-[#faf9f6] text-stone-800 font-sans selection:bg-rose-100 overflow-x-hidden">
-      
+ 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center text-center px-6 overflow-hidden">
         <motion.div 
@@ -142,7 +202,7 @@ export default function App() {
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-stone-900/40 z-10" />
           <img 
-            src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80" 
+            src="https://i.ibb.co.com/LGpDY3F/YLW03193.png" 
             className="w-full h-full object-cover"
             alt="Wedding Background"
           />
@@ -162,7 +222,7 @@ export default function App() {
             transition={{ delay: 0.3 }}
             className="text-6xl md:text-8xl font-serif"
           >
-            Rifky & Cindy
+            Rifky & Chindi
           </motion.h1>
           <motion.div 
             initial={{ opacity: 0 }}
@@ -430,5 +490,6 @@ export default function App() {
         <p className="text-[10px] text-stone-300 mt-12 uppercase tracking-widest">Digital Invitation &bull; Powered by Gemini AI</p>
       </footer>
     </div>
-  );
+  </>
+)
 }
